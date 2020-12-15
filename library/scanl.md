@@ -3,7 +3,7 @@
 Sums = [0, 1, 3, 6, 10, 15].
 ```
 
-When considering the lists _columns_ of a table, scanl/5 combines the accumulator with each _row_ to produce the next value in the result list.  We illustrate this using plus/4 which adds the accumulator with the values from the row to produce the next accumulator.  We use trace/1 to illustrate how the values are combined.
+When considering the lists _columns_ of a table, scanl/5 combines the accumulator with each _row_ to produce the next value in the result list.  We illustrate this using plus/4 which adds the accumulator with the values from the row to produce the next accumulator.  We use trace/2 to illustrate how the values are combined.
 
 ```
 plus(A,B,C,Result) :-
