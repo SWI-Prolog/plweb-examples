@@ -13,11 +13,14 @@ following properties:
     example, is displayed as first and always visible.
 
   - They optionally have a title.  The title is identified using
-    a level-1 markdown title, e.g.
+    a level-1 markdown title, as below.  It must be first.
 
     ```
     # Using append/3 for splitting lists
     ```
+
+  - Examples can have subsections using level-2 or level-3
+    section headers.
 
   - Code blocks are supposed to contain either valid program snippets
     or queries.  Queries are identified e.g., ``?- member(X, [1,2,3]).``.
