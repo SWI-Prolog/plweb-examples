@@ -1,4 +1,4 @@
-# Check all elements of a list
+## Check all elements of a list
 
 ```
 ?- maplist(atom, [a, b, c]).
@@ -14,21 +14,21 @@ true.
 false.
 ```
 
-# Fill a list
+## Fill a list
 
 ```
 ?- length(L, 5), maplist(=(foo), L).
 L = [foo, foo, foo, foo, foo].
 ```
 
-# Convert all elements
+## Convert all elements
 
 ```
 ?- maplist(atom_chars, [foo, bar, baz], Cs).
 Cs = [[f, o, o], [b, a, r], [b, a, z]].
 ```
 
-# With a non-deterministic goal
+## With a non-deterministic goal
 
 ```
 ?- length(L, 3), maplist(between(0, 1), L).
