@@ -12,7 +12,10 @@ When using these predicates
   - Make sure to respect the mode, i.e., make sure the input lists
     are proper lists.  See is_list/1.
   - Make sure elements are sufficiently instantiated such that their
-    equality can safely be checked using unification.  See `(?=)/2`.
+    equality can safely be checked using unification.  See ?=/2.
+  - Make sure the inputs are indeed _sets_, i.e., the lists contain
+    no duplicates.  In this case, a list is considered to have
+    a duplicate if two members of the list can _unify_.
 
 
 ## Intended behavior
