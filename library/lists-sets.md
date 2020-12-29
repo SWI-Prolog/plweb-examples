@@ -12,7 +12,7 @@ When using these predicates
   - Make sure to respect the mode, i.e., make sure the input lists
     are proper lists.  See is_list/1.
   - Make sure elements are sufficiently instantiated such that their
-    equality can safely be checked using unification.  See (?=)/2.
+    equality can safely be checked using unification.  See `(?=)/2`.
 
 
 ## Intended behavior
