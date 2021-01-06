@@ -1,4 +1,4 @@
-# What is wrong with insersection/3 and friends?
+# What is wrong with intersection/3 and friends?
 
 The library(lists) contains a number of old predicates for manipulating
 sets represented as _unordered_ lists, notably intersection/3, union/3,
