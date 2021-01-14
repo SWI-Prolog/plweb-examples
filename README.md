@@ -1,7 +1,8 @@
 # SWI-Prolog examples
 
 This directory provides examples for the SWI-Prolog built-in predicates
-as well as the library. Examples are PlDoc (markdown) files with the
+as well as the library. Examples are [PlDoc](https://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/pldoc.html%27))
+([markdown](https://www.markdownguide.org/basic-syntax/)) files with the
 following properties:
 
   - The file extension is `.md`.
@@ -23,9 +24,12 @@ following properties:
     section headers.
 
   - Code blocks are supposed to contain either valid program snippets
-    or queries.  Queries are identified e.g., ``?- member(X, [1,2,3]).``.
+    or queries, surrounded by markdown code markup for
+    [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks),
+    i.e. three backticks or three tildes. Queries are identified
+    through the presence of `?-` e.g., ``?- member(X, [1,2,3]).``.
     If the next term looks like an answer is is ignored for indexing.
-    Code blocks are cross-referenced and use to bind the example to
+    Code blocks are cross-referenced and used to bind the example to
     predicates.
 
   - Markdown text is analysed for _predicate indicators_, linking the
