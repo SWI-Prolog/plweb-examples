@@ -25,7 +25,7 @@ following properties:
   - Code blocks are supposed to contain either valid program snippets
     or queries.  Queries are identified e.g., ``?- member(X, [1,2,3]).``.
     If the next term looks like an answer is is ignored for indexing.
-    Code blocks are cross-referenced and use to bind the example to
+    Code blocks are cross-referenced and used to bind the example to
     predicates.
 
   - Markdown text is analysed for _predicate indicators_, linking the
