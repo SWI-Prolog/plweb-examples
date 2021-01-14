@@ -1,4 +1,4 @@
-# Grabbing an unbound variable from the term that appears as argument 1
+# Grabbing an unbound variable from argument 1
 
 ## Standard usage 
 
