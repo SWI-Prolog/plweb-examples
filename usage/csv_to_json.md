@@ -12,7 +12,8 @@ San Francisco,43,57,0,1994-11-29
 Hayward,37,54,,1994-11-29
 ~~~
 
-The script `csv_to_json.pl` reads the CSV from standard input, converts
+The script `csv_to_json.pl` reads the CSV from standard input or from
+the file provided as the first argument of the script. It converts
 the contents to a list of dicts, then writes this as JSON to standard
 output:
 
@@ -23,7 +24,11 @@ output:
 :- use_module(library(http/json)).
 
 main :-
-    csv_read_stream(current_input, [Colnames|Rows], []),
+    (   current_prolog_flag(argv, [CSV_file|_])
+    ->  csv_read_file(CSV_file, CSV, [])
+    ;   csv_read_stream(current_input, CSV, [])
+    ),
+    CSV = [Colnames|Rows],
     Colnames =.. [row|Names],
     maplist(row_dict(Names), Rows, Dicts),
     json_write_dict(current_output, Dicts, [null('')]).
@@ -38,11 +43,10 @@ The `null('')` option to `json_write_dict/3` is necessary to convert the
 empty "prcp" field in the last row to a missing value represented as
 `null` in the JSON output.
 
-This is how we can use it to convert `weather.csv` to JSON on the
-command line:
+This is how we can use it to convert `weather.csv` to JSON:
 
 ~~~
-$ < weather.csv swipl csv_to_json.pl
+$ swipl csv_to_json.pl weather.csv
 [
   {
     "city":"San Francisco",
