@@ -35,7 +35,7 @@ row_dict(Names, Row, Dict) :-
 ~~~
 
 The `null('')` option to `json_write_dict/3` is necessary to convert the
-empty "prcp" field in the last column to a missing value represented as
+empty "prcp" field in the last row to a missing value represented as
 `null` in the JSON output.
 
 This is how we can use it to convert `weather.csv` to JSON on the
