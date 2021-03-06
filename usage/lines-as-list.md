@@ -11,7 +11,7 @@ stream_lines(In, Lines) :-
     split_string(Str, "\n", "", Lines).
 ```
 
-This loads all lines to memory as strings. If we use the [Unix dictionary words](https://en.wikipedia.org/wiki/Words_(Unix)):
+This loads all lines to memory as strings. If we use the [[Unix dictionary words][https://en.wikipedia.org/wiki/Words_(Unix)]]:
 
 ```
 ?- file_lines("/usr/share/dict/words", Lines).
