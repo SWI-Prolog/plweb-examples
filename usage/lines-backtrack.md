@@ -16,7 +16,7 @@ stream_line(In, Line) :-
     ).
 ~~~
 
-This will backtrack over consecutive lines in the input. If we use the [Unix dictionary words](https://en.wikipedia.org/wiki/Words_(Unix)):
+This will backtrack over consecutive lines in the input. If we use the [[Unix dictionary words][https://en.wikipedia.org/wiki/Words_(Unix)]]:
 
 ~~~
 ?- file_line("/usr/share/dict/words", Word).
