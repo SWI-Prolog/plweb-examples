@@ -1,6 +1,6 @@
 # Convert a CSV with column names to JSON
 
-With the help of library(csv) and library(http/json), we read a CSV file
+With the help of library(csv) and library(json), we read a CSV file
 and use the column names in the first row to emit JSON.
 
 For this example, we use the file `weather.csv`:
@@ -21,7 +21,7 @@ output:
 :- initialization(main, main).
 
 :- use_module(library(csv)).
-:- use_module(library(http/json)).
+:- use_module(library(json)).
 
 main :-
     (   current_prolog_flag(argv, [CSV_file|_])
@@ -38,6 +38,9 @@ row_dict(Names, Row, Dict) :-
     pairs_keys_values(Data, Names, Fields),
     dict_create(Dict, _, Data).
 ~~~
+
+ __Note__: versions before 9.3.33 must use library(http/json) instead of
+library(json).
 
 The `null('')` option to `json_write_dict/3` is necessary to convert the
 empty "prcp" field in the last row to a missing value represented as
